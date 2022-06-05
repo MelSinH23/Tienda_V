@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section>
+            <h2>Ejemplo de Formularios</h2>
+            <form action="#">
+                <label>Botón</label><input type="button" value="Enviar" id="button"/><br>
+                <label>Checkbox</label><input type="checkbox" id="checkbox" checked="true"/>Términos y Condiciones<br>
+                <label>Color</label><input type="color" id="color" value="#ff0022"/><br>
+                <label>Texto</label><input type="text" name="text" placeholder="Ejemplo de Placeholder" size="20"/><br>
+                <label>textArea</label><textarea id="Ejemplo" rows="5" cols="10"></textarea><br>
+                <label>Fecha</label><input type="date" name="date" min="2021-01-01" max="2023-12-31"/><br>
+                <label>Datetime-local</label><input type="datetime-local" name="datetime-local"/><br>
+                <label>Time</label><input type="time" name="time"/><br>
+                <label>Email</label><input type="text" name="email" placeholder="Digite el email"/><br>
+                <label>Archivo </label><input type="file" name="file" accept-"image/png, image/jpeg"><br>
+                <label>Hidden </label><input type="hidden" name="hidden" value="sdfdsf-sdfd-fjghj565-65245"><br>
+                <label>Buscar </label><input type="search" name="search" placeholder="criterio de busqueda"><br>
+                <label>Teléfono </label><input type="tel" name="tel" placeholder=""><br>
+                <label>URL</label><input type="url" name="url" placeholder=""><br>
+                <label>Semana </label><input type="week" name="week"><br>
+                <label>Mes</label><input type="month" name="month"><br>
+                <label>Número </label><input type="number" name="number" value="50"><br>
+                <label>Contraseña </label><input type="password" name="password"><br>
+                <label>Radio</label>Valor 1<input type="radio" name="radio" value="1"><br>
+                <label>Radio</label>Valor 2<input type="radio" name="radio" value="2"><br>
+                <label>Radio</label>Valor 3<input type="radio" name="radio" value="3"><br>
+                <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value=this.value">
+                <label>Reiniciar</label><input type="reset" name="reset" value="Limpiar"><br>
+                <label>Enviar </label><input type="submit" value="submit"><br>
+            </form>
+        </section>
+    </body>
+</html>
