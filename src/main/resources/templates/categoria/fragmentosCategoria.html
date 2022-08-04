@@ -12,7 +12,7 @@
                             type="button" 
                             class="btn btn-primary btn-block" 
                             data-bs-toggle="modal" 
-                            data-bs-target="#agregarCliente">
+                            data-bs-target="#agregarCategoria">
                             <i class="fas fa-plus"></i> [[#{accion.agregar}]]
                         </button>
                     </div>
@@ -32,8 +32,8 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th>#</th>
-                                            <th th:text="#{categoria.nombre}">Nombre</th>
-                                            <th th:text="#{categoria.limite}">Límite</th>
+                                            <th th:text="#{categoria.descripción}">Descripción</th>
+                                            <th th:text="#{categoria.activo}">Activos</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -41,7 +41,8 @@
                                     <tbody>
                                         <tr th:each="categoria, contador : ${categorias}">
                                             <td>[[${contador.count}]]</td>
-                                            <td>[[${categoria.titulo} + ' ' + ${categoria.descripcion}]]</td>
+                                            <td>[[${categoria.descripcion}</td>
+                                            <td>[[${categoria.activo}</td>
                                             <td>
                                                 <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/categoria/eliminar/}+${categoria.idCategoria }"
                                                    class="btn btn-danger">
@@ -63,7 +64,6 @@
                             </div>
                         </div>
                     </div>
-                       <!-- acá va el recorte #10 después -->
                        <div class="col-md-3">
                         <div class="card text-center bg-success text-white mb-3">
                             <div class="card-body">
@@ -114,7 +114,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a th:href="@{/cliente/listado}" class="btn btn-ligth btn-block">
+                            <a th:href="@{/categoria/listado}" class="btn btn-ligth btn-block">
                                 <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
                             </a>
                         </div>
@@ -124,7 +124,7 @@
                             </button>
                         </div>
                         <div class="col-md-3">
-                            <a th:href="@{/cliente/eliminar/}+${cliente.idCliente}"
+                            <a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
                                class="btn btn-danger btn-block">
                                 <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
                             </a>
